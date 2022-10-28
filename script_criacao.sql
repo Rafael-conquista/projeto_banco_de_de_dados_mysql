@@ -1,4 +1,4 @@
-
+drop database if exists TRABALHO;
 -- comando usado para criação do banco de dados
 create database if not exists TRABALHO;
 
@@ -85,6 +85,7 @@ create table trabalho.empresta(
     numero_volume	int		not null,
     isbn_livro		int		not null,
     data_devolucao	date	not null,
+    data_emprestimo date 	not null,
     multa_atraso	float	not null,
     constraint fk_codigo_pessoa
 		foreign key(codigo_pessoa) references trabalho.pessoa(codigo_pessoa),
@@ -114,23 +115,3 @@ create table telefone_pessoa(
     constraint fk_codigo_pessoa
 		foreign key(codigo_pessoa) references trabalho.pessoa(codigo_pessoa)
 );
-
-drop table if exists trabalho.data_emprestimo;
-
-create table data_emprestimo(
-	codigo_pessoa		int 		not null,
-    numero_volume		int			not null,
-    isbn_livro			int			not null,
-    data_emprestimo		date		not null,
-    constraint pk_data_emprestimo primary key(data_emprestimo),
-    constraint fk_codigo_pessoa
-		foreign key(codigo_pessoa) references trabalho.pessoa(codigo_pessoa),
-	constraint fk_numero_volume
-		foreign key(numero_volume) references trabalho.volume(numero_volume),
-	constraint fk_isbn_livro
-		foreign key(isbn_livro) references trabalho.livro(isbn)
-);
-
-
-
-
