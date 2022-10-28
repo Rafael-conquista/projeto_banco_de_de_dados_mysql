@@ -246,42 +246,41 @@ INSERT INTO trabalho.autor(nome_autor) VALUES ("Roberta");
 INSERT INTO trabalho.autor(nome_autor) VALUES ("Vinicius");
 -- insere emprestimos
 INSERT INTO trabalho.empresta(
-	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso
+	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso,data_emprestimo
 ) VALUES (
-	4, 1, 1, 20241223, 50
+	4, 1, 1, 20241223, 50, 20211122
 );
 INSERT INTO trabalho.empresta(
-	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso
+	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso,data_emprestimo
 ) VALUES (
-	5, 15, 3, 20240723, 50
+	5, 15, 3, 20240723, 50, 20211122
 );
 INSERT INTO trabalho.empresta(
-	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso
+	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso,data_emprestimo
 ) VALUES (
-	6, 6, 2, 20240124, 50
+	6, 6, 2, 20240124, 50, 20211122
 );
 INSERT INTO trabalho.empresta(
-	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso
+	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso,data_emprestimo
 ) VALUES (
-	7, 11, 3, 20230610, 50
+	7, 11, 3, 20230610, 50, 20211122
 );
 INSERT INTO trabalho.empresta(
-	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso
+	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso,data_emprestimo
 ) VALUES (
-	8, 21, 5, 20230610, 50
+	8, 21, 5, 20230610, 50, 20211122
 );
 
 select 
-	p.nome_pessoa,t.descricao
+	p.nome_pessoa,t.descricao descricao_tipo
 from trabalho.pessoa p
 inner join trabalho.tipo t on p.codigo_tipo = t.codigo_tipo;
 
 select
-	l.titulo,v.numero_volume,p.nome_pessoa,t.descricao
+	l.titulo,v.numero_volume,p.nome_pessoa,t.descricao descricao_tipo
 from trabalho.volume v
 inner join trabalho.livro l on v.isbn_livro = l.isbn
 inner join trabalho.empresta e on v.numero_volume = e.numero_volume
 inner join trabalho.pessoa p on e.codigo_pessoa = p.codigo_pessoa
 inner join trabalho.tipo t on p.codigo_tipo = t.codigo_tipo
 ;
-
