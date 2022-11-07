@@ -38,7 +38,7 @@ create table trabalho.autor(
 drop table if exists trabalho.livro;
 
 create table trabalho.livro(
-	isbn			int				not null,
+	isbn			char(13)		not null,
     titulo			varchar(150)	not null,
     ano_publicacao	year(4)			not null,
     editora			varchar(150)	not null,
@@ -72,7 +72,7 @@ drop table if exists trabalho.volume;
 create table trabalho.volume(
 	numero_volume	int 			not null	auto_increment,
     situacao		varchar(20)		not null,
-    isbn_livro		int				not null,
+    isbn_livro		char(13)				not null,
     constraint	pk_numero_volume primary key(numero_volume),
     constraint fk_isbn_livro
 		foreign key(isbn_livro) references trabalho.livro(isbn)
@@ -83,7 +83,7 @@ drop table if exists trabalho.empresta;
 create table trabalho.empresta(
 	codigo_pessoa	int 	not null,
     numero_volume	int		not null,
-    isbn_livro		int		not null,
+    isbn_livro		char(13)		not null,
     data_devolucao	date	not null,
     data_emprestimo date 	not null,
     multa_atraso	float	not null,
@@ -95,11 +95,11 @@ create table trabalho.empresta(
 		foreign key(isbn_livro) references trabalho.livro(isbn)
 );
 
-drop table if exists trabalho.do;
+drop table if exists trabalho.escreve;
 
-create table trabalho.do(
+create table trabalho.escreve(
 	codigo_autor	int		not null,
-    isbn_livro		int		not null,
+    isbn_livro		char(13)		not null,
     constraint fk_codigo_autor
 		foreign key(codigo_autor) references trabalho.autor(codigo_autor),
 	constraint fk_isbn_livro
