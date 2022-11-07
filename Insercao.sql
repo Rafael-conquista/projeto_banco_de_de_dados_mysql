@@ -85,160 +85,160 @@ INSERT INTO trabalho.tema(descricao,codigo_area) VALUES ("frontend", 1);
 INSERT INTO trabalho.livro(
 	isbn, titulo, ano_publicacao, editora, codigo_tema
 ) VALUES (
-	1, "Banco de Dados", 2005, "editora1", 1
+	"1111111111111", "Banco de Dados", 2005, "editora1", 1
 );
 INSERT INTO trabalho.livro(
 	isbn, titulo, ano_publicacao, editora, codigo_tema
 ) VALUES (
-	2, "Java", 2000, "editora2", 2
+	"2222222222222", "Java", 2000, "editora2", 2
 );
 INSERT INTO trabalho.livro(
 	isbn, titulo, ano_publicacao, editora, codigo_tema
 ) VALUES (
-	3, "Python", 2015, "editora1", 3
+	"3333333333333", "Python", 2015, "editora1", 3
 );
 INSERT INTO trabalho.livro(
 	isbn, titulo, ano_publicacao, editora, codigo_tema
 ) VALUES (
-	4, "Linguagem C", 1997, "editora3", 2
+	"4444444444444", "Linguagem C", 1997, "editora3", 2
 );
 INSERT INTO trabalho.livro(
 	isbn, titulo, ano_publicacao, editora, codigo_tema
 ) VALUES (
-	5, "HTML/CSS", 2010, "editora4", 4
+	"5555555555555", "HTML/CSS", 2010, "editora4", 4
 );
 -- insere volume
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	1,"disponível",1
+	1,"disponível","1111111111111"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	2,"disponível",1
+	2,"disponível","1111111111111"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	3,"disponível",1
+	3,"disponível","1111111111111"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	4,"disponível",1
+	4,"disponível","1111111111111"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	5,"disponível",1
+	5,"disponível","1111111111111"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	6,"disponível",2
+	6,"disponível","2222222222222"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	7,"disponível",2
+	7,"disponível","2222222222222"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	8,"disponível",2
+	8,"disponível","2222222222222"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	9,"disponível",2
+	9,"disponível","2222222222222"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	10,"disponível",2
+	10,"disponível","2222222222222"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	11,"disponível",3
+	11,"disponível","3333333333333"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	12,"disponível",3
+	12,"disponível","3333333333333"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	13,"disponível",3
+	13,"disponível","3333333333333"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	14,"disponível",3
+	14,"disponível","3333333333333"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	15,"disponível",3
+	15,"disponível","3333333333333"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	16,"disponível",4
+	16,"disponível", "4444444444444"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	17,"disponível",4
+	17,"disponível","4444444444444"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	18,"disponível",4
+	18,"disponível","4444444444444"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	19,"disponível",4
+	19,"disponível","4444444444444"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	20,"disponível",4
+	20,"disponível","4444444444444"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	21,"disponível",5
+	21,"disponível","5555555555555"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	22,"disponível",5
+	22,"disponível","5555555555555"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	23,'disponível',5
+	23,'disponível',"5555555555555"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	24,"disponível",5
+	24,"disponível","5555555555555"
 );
 INSERT INTO trabalho.volume(
 	numero_volume, situacao, isbn_livro
 ) VALUES (
-	25,"disponível",5
+	25,"disponível","5555555555555"
 );
 -- insere autor
-INSERT INTO trabalho.do(isbn_livro,codigo_autor) VALUES (1,1);
-INSERT INTO trabalho.do(isbn_livro,codigo_autor) VALUES (2,2);
-INSERT INTO trabalho.do(isbn_livro,codigo_autor) VALUES (3,3);
-INSERT INTO trabalho.do(isbn_livro,codigo_autor) VALUES (4,4);
-INSERT INTO trabalho.do(isbn_livro,codigo_autor) VALUES (5,5);
+INSERT INTO trabalho.escreve(isbn_livro,codigo_autor) VALUES ("1111111111111",1);
+INSERT INTO trabalho.escreve(isbn_livro,codigo_autor) VALUES ("2222222222222",2);
+INSERT INTO trabalho.escreve(isbn_livro,codigo_autor) VALUES ("3333333333333",3);
+INSERT INTO trabalho.escreve(isbn_livro,codigo_autor) VALUES ("4444444444444",4);
+INSERT INTO trabalho.escreve(isbn_livro,codigo_autor) VALUES ("5555555555555",5);
 INSERT INTO trabalho.autor(nome_autor) VALUES ("Douglas");
 INSERT INTO trabalho.autor(nome_autor) VALUES ("José");
 INSERT INTO trabalho.autor(nome_autor) VALUES ("Maria");
@@ -248,27 +248,27 @@ INSERT INTO trabalho.autor(nome_autor) VALUES ("Vinicius");
 INSERT INTO trabalho.empresta(
 	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso,data_emprestimo
 ) VALUES (
-	4, 1, 1, 20241223, 50, 20211122
+	4, 1, "1111111111111", 20241223, 50, 20211122
 );
 INSERT INTO trabalho.empresta(
 	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso,data_emprestimo
 ) VALUES (
-	5, 15, 3, 20240723, 50, 20211122
+	5, 15, "3333333333333", 20240723, 50, 20211122
 );
 INSERT INTO trabalho.empresta(
 	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso,data_emprestimo
 ) VALUES (
-	6, 6, 2, 20240124, 50, 20211122
+	6, 6, "2222222222222", 20240124, 50, 20211122
 );
 INSERT INTO trabalho.empresta(
 	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso,data_emprestimo
 ) VALUES (
-	7, 11, 3, 20230610, 50, 20211122
+	7, 11, "3333333333333", 20230610, 50, 20211122
 );
 INSERT INTO trabalho.empresta(
 	codigo_pessoa,numero_volume,isbn_livro,data_devolucao,multa_atraso,data_emprestimo
 ) VALUES (
-	8, 21, 5, 20230610, 50, 20211122
+	8, 21, "5555555555555", 20230610, 50, 20211122
 );
 
 select 
